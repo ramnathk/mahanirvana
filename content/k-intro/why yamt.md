@@ -1,0 +1,16 @@
+# Why Yet Another Mahanirvana Tantra?
+
+The other books I found were all either in Sanskrit or entirely English. The
+former was too daunting for me to attempt reading and the latter lacked any
+meaningful detail for practical application of the treatise The all english
+translations of mantras by Sir John Woodroffe miss out on the 'sound'
+
+e.g. Chapter 9 says
+
+> Hring, Salutation to the raw-meat eaters: Svaha (18).
+
+That for anyone, trying to understand and practice the mantra is useless!
+
+At the same time, the Hindi translations by Baldev Prasad  Mishra didn't seem
+interesting as my grasp of Hindi is not that much more than my grasp of
+Sanskrit!
