@@ -1,14 +1,6 @@
 name: Quarto Publish
 
 on:
-  push:
-    branches:
-      - main # Runs when 'main' branch is updated
-    paths:
-      - "**/*.qmd"
-      - "_quarto.yml"
-      - "styles.css"
-      - ".github/workflows/deploy.yml"
   workflow_dispatch: # Enables manual trigger from GitHub UI
 
 jobs:
@@ -21,6 +13,12 @@ jobs:
       id-token: write
 
     steps:
+      - name: Prevent unauthorized users
+        if: github.actor != 'ramnathk'
+        run: |
+          echo "🚫 Unauthorized: ${{ github.actor }} is not allowed to run this workflow."
+          exit 1
+
       - name: Checkout repo
         uses: actions/checkout@v4
 
