@@ -33,3 +33,5 @@ __pycache__/
 
 # Mac resource forks (sometimes created)
 ._*
+
+/.quarto/
