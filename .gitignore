@@ -1,0 +1,35 @@
+# Node and Quarto cache/output
+.quarto/
+_publish/
+_site/
+*.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# LaTeX auxiliary files (if you render to PDF)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Quarto render artifacts (optional: keep final HTML/EPUB in Git if needed)
+*.html
+*.pdf
+*.epub
+
+# Python virtual environments (if used)
+.venv/
+__pycache__/
+*.py[cod]
+
+# Mac resource forks (sometimes created)
+._*
