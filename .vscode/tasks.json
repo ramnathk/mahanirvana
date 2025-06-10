@@ -2,18 +2,29 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Deploy Quarto site to gh-pages",
+            "label": "Rename .qmd files",
             "type": "shell",
-            "command": "bash",
-            "args": [
-                "-c",
-                "rm -rf _site && git worktree add _site gh-pages && quarto render && cd _site && git add . && git commit -m 'Deploy site $(date)' && git push origin gh-pages && cd .. && git worktree remove _site"
+            "command": "./scripts/rename-qmd.sh",
+            "problemMatcher": []
+        },
+        {
+            "label": "Deploy Quarto to gh-pages",
+            "type": "shell",
+            "command": "./scripts/deploy-quarto.sh",
+            "problemMatcher": []
+        },
+        {
+            "label": "Full Deploy (rename + publish)",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Rename .qmd files",
+                "Deploy Quarto to gh-pages"
             ],
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": []
+            }
         }
     ]
 }

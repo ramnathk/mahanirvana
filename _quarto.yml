@@ -7,7 +7,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - text: "Introduction"
+        menu:
+          - href: content/k-intro/dedication.qmd
+            text: Dedication
+          - href: content/k-intro/source-material.qmd
+            text: Source Material
+          - href: content/k-intro/why-yamt.qmd
+            text: Why YAMT
 
 format:
   html:
