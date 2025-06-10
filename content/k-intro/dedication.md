@@ -1,0 +1,3 @@
+This attempt to bring the original Sanskrit verses along side the English
+translation and commentary is dedicated at the playful feet of Batuka who is the
+one reality.
