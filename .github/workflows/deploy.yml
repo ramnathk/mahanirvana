@@ -1,0 +1,31 @@
+name: Quarto Publish
+
+on:
+  push:
+    branches:
+      - main # Runs when 'main' branch is updated
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install dependencies (if any)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Render Quarto site
+        run: quarto render
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
