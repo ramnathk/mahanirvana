@@ -4,8 +4,7 @@ _publish/
 _site/
 *.ipynb_checkpoints
 
-# VS Code settings
-.vscode/
+# Some VS Code settings
 *.code-workspace
 
 # System files

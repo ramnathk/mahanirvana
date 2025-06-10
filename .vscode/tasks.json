@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Deploy Quarto site to gh-pages",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "rm -rf _site && git worktree add _site gh-pages && quarto render && cd _site && git add . && git commit -m 'Deploy site $(date)' && git push origin gh-pages && cd .. && git worktree remove _site"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
