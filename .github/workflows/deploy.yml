@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main # Runs when 'main' branch is updated
+    paths:
+      - "**/*.qmd"
+      - "_quarto.yml"
+      - "styles.css"
+      - ".github/workflows/deploy.yml"
   workflow_dispatch: # Enables manual trigger from GitHub UI
 
 jobs:
@@ -25,7 +30,6 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc
 
       - name: Render Quarto site
         run: quarto render
