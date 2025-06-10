@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main # Runs when 'main' branch is updated
+  workflow_dispatch: # Enables manual trigger from GitHub UI
 
 jobs:
   build-deploy:
