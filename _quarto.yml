@@ -33,6 +33,6 @@ format:
   html:
     theme:
       - materia
-      - styles/brand.scss
+      # - styles/brand.scss
     css: styles/styles.css
     toc: true
