@@ -32,7 +32,7 @@ book:
 format:
   html:
     theme:
-      - cosmo
-      - brand
-    css: styles.css
+      - materia
+      - styles/brand.scss
+    css: styles/styles.css
     toc: true
