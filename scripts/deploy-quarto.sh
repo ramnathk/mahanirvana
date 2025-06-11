@@ -16,7 +16,7 @@ echo "Rendering site with Quarto..."
 quarto render  # this writes to default _site/
 
 echo "Copying rendered site to gh-pages worktree..."
-rsync -av --delete _site/ _deploy_tmp/
+rsync -av --delete --exclude='.git' _site/ _deploy_tmp/
 
 echo "Committing and pushing rendered site to gh-pages..."
 cd _deploy_tmp

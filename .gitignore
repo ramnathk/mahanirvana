@@ -2,6 +2,8 @@
 .quarto/
 _publish/
 _site/
+_deploy_tmp/
+
 *.ipynb_checkpoints
 
 # Some VS Code settings
@@ -31,5 +33,3 @@ __pycache__/
 
 # Mac resource forks (sometimes created)
 ._*
-
-/.quarto/
