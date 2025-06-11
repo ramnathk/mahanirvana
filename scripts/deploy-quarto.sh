@@ -3,22 +3,27 @@
 
 set -e
 
-echo "Removing existing _site folder..."
-rm -rf _site
+echo "Cleaning up..."
+rm -rf _site _deploy_tmp
 
-echo "Pruning stale worktree for _site..."
+echo "Pruning stale worktrees..."
 git worktree prune
 
-echo "Adding gh-pages worktree..."
-git worktree add _site gh-pages
+echo "Adding gh-pages worktree to _deploy_tmp..."
+git worktree add _deploy_tmp gh-pages
 
 echo "Rendering site with Quarto..."
-quarto render
+quarto render  # this writes to default _site/
 
-echo "Committing rendered site..."
-cd _site
+echo "Copying rendered site to gh-pages worktree..."
+rsync -av --delete _site/ _deploy_tmp/
+
+echo "Committing and pushing rendered site to gh-pages..."
+cd _deploy_tmp
 git add -A
 git commit -m "Deploy site $(date '+%Y-%m-%d %H:%M:%S')" || echo "Nothing to commit"
 git push origin gh-pages
+cd -
 
-cd
+echo "Cleaning up temporary worktree..."
+git worktree remove _deploy_tmp
