@@ -1,5 +1,6 @@
 ---
 title: Key books I used in creating this
+partial: true
 ---
 
 1. Mahanirvana Tantra Vol Xiii With The Commentary Of Hariharananda Bharati

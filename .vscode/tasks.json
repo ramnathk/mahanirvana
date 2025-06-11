@@ -8,16 +8,38 @@
             "problemMatcher": []
         },
         {
+            "label": "Copy final QMDs to Pages",
+            "type": "shell",
+            "command": "./scripts/copy-files-for-render.sh",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
             "label": "Deploy Quarto to gh-pages",
             "type": "shell",
             "command": "./scripts/deploy-quarto.sh",
             "problemMatcher": []
         },
         {
+            "label": "Preview Quarto site (from pages)",
+            "type": "shell",
+            "command": "quarto preview pages/",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
             "label": "Full Deploy (rename + publish)",
             "dependsOrder": "sequence",
             "dependsOn": [
                 "Rename .qmd files",
+                "Copy non-partial QMDs to Pages",
                 "Deploy Quarto to gh-pages"
             ],
             "problemMatcher": [],

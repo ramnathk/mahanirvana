@@ -4,6 +4,9 @@ _publish/
 _site/
 _deploy_tmp/
 
+# temp folder to create final QMDs
+pages/
+
 *.ipynb_checkpoints
 
 # Some VS Code settings
@@ -33,3 +36,7 @@ __pycache__/
 
 # Mac resource forks (sometimes created)
 ._*
+
+
+
+/.quarto/

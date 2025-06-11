@@ -9,30 +9,16 @@ website:
         text: Home
       - text: "Introduction"
         menu:
-          - href: content/k-intro/dedication.qmd
+          - href: dedication
             text: Dedication
-          - href: content/k-intro/source-material.qmd
+          - href: source-material
             text: Source Material
-          - href: content/k-intro/why-yamt.qmd
+          - href: why-yamt
             text: Why YAMT
-
-book:
-  chapters:
-    - index.qmd
-    - part: "Introductory Sections"
-      chapters:
-        - content/k-intro/dedication.qmd
-        - content/k-intro/source-material.qmd
-        - content/k-intro/why-yamt.qmd
-    # - part: "Main Text"
-    #   chapters:
-    #     - content/chapter1/assembled.qmd
-    #     - content/chapter2/assembled.qmd # Add more as you go
 
 format:
   html:
     theme:
       - materia
-      # - styles/brand.scss
     css: styles/styles.css
     toc: true
