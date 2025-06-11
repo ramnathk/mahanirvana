@@ -16,6 +16,19 @@ website:
           - href: content/k-intro/why-yamt.qmd
             text: Why YAMT
 
+book:
+  chapters:
+    - index.qmd
+    - part: "Introductory Sections"
+      chapters:
+        - content/k-intro/dedication.qmd
+        - content/k-intro/source-material.qmd
+        - content/k-intro/why-yamt.qmd
+    # - part: "Main Text"
+    #   chapters:
+    #     - content/chapter1/assembled.qmd
+    #     - content/chapter2/assembled.qmd # Add more as you go
+
 format:
   html:
     theme:
