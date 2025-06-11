@@ -22,7 +22,6 @@ Thumbs.db
 
 # Quarto render artifacts (optional: keep final HTML/EPUB in Git if needed)
 *.html
-*.pdf
 *.epub
 
 # Python virtual environments (if used)
