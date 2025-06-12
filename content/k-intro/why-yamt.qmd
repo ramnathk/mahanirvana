@@ -1,5 +1,6 @@
 ---
 title: Why Yet Another Mahanirvana Tantra?
+output-file: why-yamt.html
 ---
 
 The other books I found were all either in Sanskrit or entirely English. The

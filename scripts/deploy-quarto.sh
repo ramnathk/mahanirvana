@@ -4,7 +4,7 @@
 set -e
 
 echo "Cleaning up..."
-rm -rf _site _deploy_tmp
+rm -rf  _deploy_tmp 
 
 echo "Pruning stale worktrees..."
 git worktree prune
@@ -19,15 +19,15 @@ echo "Adding gh-pages worktree to _deploy_tmp..."
 git worktree add _deploy_tmp gh-pages
 
 echo "Rendering site with Quarto..."
-quarto render pages/  # writes to _site/
+quarto render pages/ 
 
 echo "Copying rendered site to gh-pages worktree..."
-rsync -av --delete --exclude='.git' _site/ _deploy_tmp/
+rsync -av --delete --exclude='.git' pages/_site/ _deploy_tmp/
 
 echo "Committing and pushing rendered site to gh-pages..."
 cd _deploy_tmp
 git add -A
-git commit -m "Deploy site $(date '+%Y-%m-%d %H:%M:%S')" || echo "Nothing to commit"
+git commit -m "Deploy site $(date '+%Y-%m-%d %H:%M:%S') ($(git rev-parse --short HEAD))" || echo "Nothing to commit"
 git push origin gh-pages
 cd -
 

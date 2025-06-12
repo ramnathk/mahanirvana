@@ -1,5 +1,6 @@
 ---
 title: Key books I used in creating this
+output-file: source-material.html
 partial: true
 ---
 

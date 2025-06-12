@@ -1,19 +1,25 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   title: "mahanirvana"
+  # Quarto will automatically discover .qmd files in the project.
+  # The 'output-file' YAML metadata in each .qmd will control its output path.
   navbar:
     left:
-      - href: index.qmd
+      - href: index.qmd # This remains the same as index is at the root
         text: Home
       - text: "Introduction"
         menu:
-          - href: dedication
+          # IMPORTANT: The hrefs here MUST refer to the *explicitly defined*
+          # output filenames from the 'output-file' metadata in each .qmd.
+          # For example, 'dedication.html' if dedication.qmd has 'output-file: dedication.html'
+          - href: dedication.html
             text: Dedication
-          - href: source-material
+          - href: source-material.html
             text: Source Material
-          - href: why-yamt
+          - href: why-yamt.html
             text: Why YAMT
 
 format:

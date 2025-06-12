@@ -39,7 +39,7 @@
             "dependsOrder": "sequence",
             "dependsOn": [
                 "Rename .qmd files",
-                "Copy non-partial QMDs to Pages",
+                "Copy final QMDs to Pages",
                 "Deploy Quarto to gh-pages"
             ],
             "problemMatcher": [],
